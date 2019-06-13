@@ -16,7 +16,7 @@ sap.ui.define([
 			this.result = {};
 			this.result.items = [];
 
-			this.odataService = new sap.ui.model.odata.ODataModel("/sap/opu/odata/SAP/ZQNX_IOT_SRV/", true);
+			this.odataService = new sap.ui.model.odata.ODataModel("/IotWaterPurifier", {json:true});
 
 			this.mobNum = "";
 
@@ -76,7 +76,7 @@ sap.ui.define([
 			}
 		},
 		onPress: function () {
-				this.getOwnerComponent().getRouter().navTo("Login");
+				this.getOwnerComponent().getRouter().navTo("RouteLogin");
 			}
 			/**
 			 * Similar to onAfterRendering, but this hook is invoked before the controller's View is re-rendered
