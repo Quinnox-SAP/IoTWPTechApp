@@ -8,9 +8,12 @@
 			<SearchField id="searchId" liveChange="onSearch"></SearchField>
 			<List id="idList" mode="SingleSelectLeft" items="{oOpenServices>/results}">
 				<items>
+					<!--<ObjectListItem id="idObjList" intro="Service Request Date : {oOpenServices>RaisedOn}"-->
+					<!--	title="Service Request Number : {oOpenServices>NotiNumber}" selected="false" number="{oOpenServices>FaultCode}"-->
+					<!--	numberUnit="{oOpenServices>FaultCodeDesc}" type="Active" press="onListItemPress">-->
 					<ObjectListItem id="idObjList" intro="Service Request Date : {oOpenServices>RaisedOn}"
 						title="Service Request Number : {oOpenServices>NotiNumber}" selected="false" number="{oOpenServices>FaultCode}"
-						numberUnit="{oOpenServices>FaultCodeDesc}" type="Active" press="onListItemPress">
+						numberUnit="{oOpenServices>FaultCodeDesc}" press="onListItemPress">
 						<attributes>
 							<ObjectAttribute text="Device Number : {oOpenServices>PId}"></ObjectAttribute>
 							<ObjectAttribute id="idAddress" title="Address" text="{oOpenServices>Address}" active="true" press="onAddress"></ObjectAttribute>

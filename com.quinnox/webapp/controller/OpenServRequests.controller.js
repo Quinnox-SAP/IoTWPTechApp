@@ -108,7 +108,7 @@ sap.ui.define([
 			var data = this.getView().getModel("oOpenServices").getData();
 			sap.ui.getCore().serviceRequestNumber = data.results[idx].NotiNumber;
 			// console.log(serviceRequestNumber);
-			this.submitDialog = sap.ui.xmlfragment("com.view.Remarks", this);
+			this.submitDialog = sap.ui.xmlfragment("com.quinnox.view.Remarks", this);
 			this.submitDialog.open();
 			//}
 		},
