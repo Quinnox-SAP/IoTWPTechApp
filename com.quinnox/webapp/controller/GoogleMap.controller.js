@@ -4,7 +4,7 @@ sap.ui.define([
 ], function (Controller, MessageBox) {
 	"use strict";
 
-	return Controller.extend("com.controller.GoogleMap", {
+	return Controller.extend("com.quinnox.controller.GoogleMap", {
 
 		/**
 		 * Called when a controller is instantiated and its View controls (if available) are already created.

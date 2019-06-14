@@ -12,7 +12,7 @@ sap.ui.define([
 ], function (Controller, Button, Dialog, Label, MessageToast, Text, TextArea, MessageBox, Filter, History) {
 	"use strict";
 
-	return Controller.extend("com.controller.OpenServRequests", {
+	return Controller.extend("com.quinnox.controller.OpenServRequests", {
 
 		/**
 		 * Called when a controller is instantiated and its View controls (if available) are already created.

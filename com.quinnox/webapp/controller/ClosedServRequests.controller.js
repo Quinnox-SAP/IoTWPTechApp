@@ -5,7 +5,7 @@ sap.ui.define([
 ], function (Controller, Filter, History) {
 	"use strict";
 
-	return Controller.extend("com.controller.ClosedServRequests", {
+	return Controller.extend("com.quinnox.controller.ClosedServRequests", {
 
 		/**
 		 * Called when a controller is instantiated and its View controls (if available) are already created.

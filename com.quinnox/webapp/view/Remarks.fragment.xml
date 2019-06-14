@@ -1,4 +1,4 @@
-<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m" controllerName="com.controller.OpenServRequests"
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m" controllerName="com.quinnox.controller.OpenServRequests"
 	xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout">
 	<Dialog contentWidth="400px" title="Confirmation" id="idSettings">
 		<content>

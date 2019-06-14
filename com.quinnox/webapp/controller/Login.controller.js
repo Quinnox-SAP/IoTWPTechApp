@@ -4,7 +4,7 @@ sap.ui.define([
 ], function (Controller, MessageBox) {
 	"use strict";
 
-	return Controller.extend("com.controller.Login", {
+	return Controller.extend("com.quinnox.controller.Login", {
 
 		/**
 		 * Called when a controller is instantiated and its View controls (if available) are already created.
@@ -14,7 +14,9 @@ sap.ui.define([
 		onInit: function () {
 			this.result = {};
 			this.result.items = [];
-			this.odataService = new sap.ui.model.odata.ODataModel("/IotWaterPurifier", {json:true});
+			this.odataService = new sap.ui.model.odata.ODataModel("/IotWaterPurifier", {
+				json: true
+			});
 			this.getView().addEventDelegate({
 				onBeforeShow: jQuery.proxy(function (evt) {
 					this.onBeforeShow(evt);

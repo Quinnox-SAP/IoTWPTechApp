@@ -1,11 +1,11 @@
 sap.ui.define([
 	"sap/ui/core/UIComponent",
 	"sap/ui/Device",
-	"com/model/model"
+	"com/quinnox/model/model"
 ], function (UIComponent, Device, models) {
 	"use strict";
 
-	return UIComponent.extend("com.Component", {
+	return UIComponent.extend("com.quinnox.Component", {
 
 		metadata: {
 			manifest: "json"

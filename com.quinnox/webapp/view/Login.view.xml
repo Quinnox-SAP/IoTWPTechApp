@@ -1,4 +1,4 @@
-<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.controller.Login"
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.quinnox.controller.Login"
 	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:f="sap.f">
 	<Page title="{i18n>loginTitle}">
 		<content>

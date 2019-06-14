@@ -2,7 +2,7 @@
 	"_version": "1.1.0",
 	"sap.app": {
 		"_version": "1.1.0",
-		"id": "com",
+		"id": "com.quinnox",
 		"type": "application",
 		"i18n": "i18n/i18n.properties",
 		"applicationVersion": {
@@ -73,7 +73,7 @@
 	"sap.ui5": {
 		"_version": "1.1.0",
 		"rootView": {
-			"viewName": "com.view.Main",
+			"viewName": "com.quinnox.view.Main",
 			"type": "XML"
 		},
 		"dependencies": {
@@ -134,7 +134,7 @@
 				"routerClass": "sap.m.routing.Router",
 				"viewType": "XML",
 				"async": true,
-				"viewPath": "com.view",
+				"viewPath": "com.quinnox.view",
 				"controlAggregation": "pages",
 				"controlId": "idAppControl"
 			},
