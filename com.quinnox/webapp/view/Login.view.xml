@@ -1,12 +1,12 @@
 <mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.quinnox.controller.Login"
 	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:f="sap.f">
-	<Page title="{i18n>loginTitle}">
+	<Page title="IoT WaterPurifier Technician App">
 		<content>
 			<VBox alignContent="Center" alignItems="Center" height="100%" width="100%" justifyContent="Center">
 				<f:Avatar src="" initials="" displayShape="Circle" displaySize="M" imageFitType="Cover" class="sapUiTinyMargin"/>
-				<Label text="{i18n>MobileNoLabl}"></Label>
+				<Label text="Please Enter Your Mobile No"></Label>
 				<Input id="idnum" type="Text" maxLength="10"></Input>
-				<Button text="{i18n>LoginBtn}" press="onLoginPress" icon="sap-icon://employee-approvals"></Button>
+				<Button text="Login" press="onLoginPress" icon="sap-icon://employee-approvals"></Button>
 			</VBox>
 		</content>
 	</Page>

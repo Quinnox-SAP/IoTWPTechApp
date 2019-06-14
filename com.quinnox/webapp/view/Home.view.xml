@@ -5,14 +5,14 @@
 			<Button icon="sap-icon://log" press="onPress" type="Reject"/>
 		</headerContent>
 		<content>
-			<GenericTile header="{i18n>OpenReqHeader}" class="sapUiTinyMargin" press="onOpenServReq">
+			<GenericTile header="Open Service Request" class="sapUiTinyMargin" press="onOpenServReq">
 				<TileContent>
 					<content>
 						<NumericContent value="{oTechnician>/OpenRequest}"></NumericContent>
 					</content>
 				</TileContent>
 			</GenericTile>
-			<GenericTile header="{i18n>ClosedReqHeader}" class="sapUiTinyMargin" press="onClosedServReq">
+			<GenericTile header="Closed Service Request" class="sapUiTinyMargin" press="onClosedServReq">
 				<TileContent>
 					<content>
 						<NumericContent value="{oTechnician>/ClosedRequest}"></NumericContent>

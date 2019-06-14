@@ -1,6 +1,6 @@
 <mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.quinnox.controller.OpenServRequests"
 	xmlns:html="http://www.w3.org/1999/xhtml">
-	<Page title="{i18n>OpenReqTitle}">
+	<Page title="Open Service Requests">
 		<headerContent>
 			<Button icon="sap-icon://log" press="onPress" type="Reject"/>
 		</headerContent>
@@ -29,7 +29,7 @@
 			<Toolbar>
 				<content>
 					<ToolbarSpacer></ToolbarSpacer>
-					<Button text="{i18n>Submit}" type="Emphasized" press="onSubmitDialog"></Button>
+					<Button text="Change Status" type="Emphasized" press="onSubmitDialog"></Button>
 				</content>
 			</Toolbar>
 		</footer>
