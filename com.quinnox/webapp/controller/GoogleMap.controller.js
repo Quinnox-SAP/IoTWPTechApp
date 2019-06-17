@@ -77,7 +77,10 @@ sap.ui.define([
 			window.location.replace("http://maps.google.com");
 		},
 		onPress: function () {
-				this.getOwnerComponent().getRouter().navTo("RouteLogin");
+				//	this.getOwnerComponent().getRouter().navTo("RouteLogin");
+				var oRef = this;
+				var sRouter = sap.ui.core.UIComponent.getRouterFor(oRef);
+				sRouter.navTo("RouteLogin", null, true);
 			}
 			/**
 			 * Similar to onAfterRendering, but this hook is invoked before the controller's View is re-rendered

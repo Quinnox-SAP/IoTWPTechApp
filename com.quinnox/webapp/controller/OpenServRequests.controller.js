@@ -212,7 +212,10 @@ sap.ui.define([
 			}
 		},
 		onPress: function () {
-			this.getOwnerComponent().getRouter().navTo("RouteLogin");
+			//this.getOwnerComponent().getRouter().navTo("RouteLogin");
+			var oRef = this;
+			var sRouter = sap.ui.core.UIComponent.getRouterFor(oRef);
+			sRouter.navTo("RouteLogin", null, true);
 		}
 
 		/**
