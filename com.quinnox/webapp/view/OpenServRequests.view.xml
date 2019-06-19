@@ -7,6 +7,7 @@
 		<content>
 			<SearchField id="searchId" liveChange="onSearch"></SearchField>
 			<List id="idList" mode="SingleSelectLeft" items="{oOpenServices>/results}">
+				<!--<List id="idList" mode="SingleSelectLeft" items="{ path : 'oOpenServices>/results', sorter : { path : 'RaisedOn' } }">-->
 				<items>
 					<!--<ObjectListItem id="idObjList" intro="Service Request Date : {oOpenServices>RaisedOn}"-->
 					<!--	title="Service Request Number : {oOpenServices>NotiNumber}" selected="false" number="{oOpenServices>FaultCode}"-->
@@ -15,6 +16,7 @@
 						title="Service Request Number : {oOpenServices>NotiNumber}" selected="false" number="{oOpenServices>FaultCode}"
 						numberUnit="{oOpenServices>FaultCodeDesc}" press="onListItemPress">
 						<attributes>
+							<ObjectAttribute title="Comments by Customer" text="{oOpenServices>Comment}"></ObjectAttribute>
 							<ObjectAttribute text="Device Number : {oOpenServices>PId}"></ObjectAttribute>
 							<ObjectAttribute id="idAddress" title="Address" text="{oOpenServices>Address}" active="true" press="onAddress"></ObjectAttribute>
 						</attributes>

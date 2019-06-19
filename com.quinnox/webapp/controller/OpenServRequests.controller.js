@@ -93,7 +93,10 @@ sap.ui.define([
 
 		onAddress: function (Evt) {
 			sap.ui.getCore().address = Evt.getSource().getText();
-			this.getOwnerComponent().getRouter().navTo("RouteGoogleMap");
+			var map = "https://www.google.com/maps/search/" + sap.ui.getCore().address;
+			window.location.assign(map);
+			//window.location.replace(map);
+			//	this.getOwnerComponent().getRouter().navTo("RouteGoogleMap");
 		},
 
 		onSubmitDialog: function () {

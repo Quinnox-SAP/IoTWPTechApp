@@ -24,7 +24,7 @@ sap.ui.define([
 		// },
 		onBeforeShow: function () {
 			var me = this;
-			this.loadGoogleMaps("https://maps.googleapis.com/maps/api/js?key=AIzaSyAh2r1atxybn3PriPw7NxnJSwLnNlAML9k", me.setMapData.bind(me));
+			this.loadGoogleMaps("https://maps.googleapis.com/maps/api/js?key=AIzaSyDsY0wTepLqqPLo1fzm71MGwBjEOqQB1hc", me.setMapData.bind(me));
 		},
 		// function for loading google maps
 		loadGoogleMaps: function (scriptUrl, callbackFn) {
@@ -39,7 +39,8 @@ sap.ui.define([
 
 		// function to set map data
 		setMapData: function () {
-			var address = "Mumbai";
+			var address = sap.ui.getCore().address;
+			//	var address = "Mumbai";
 			this.getCustLocation(address);
 
 		},
@@ -74,7 +75,10 @@ sap.ui.define([
 
 		onNavigatePress: function () {
 			//window.location.replace("https://www.google.co.in/maps/dir/Mumbai/Bengaluru/");
-			window.location.replace("http://maps.google.com");
+			//	var map = "https://maps.google.com/?daddr=" + sap.ui.getCore().address;
+			var map = "https://www.google.com/maps/search/" + sap.ui.getCore().address;
+			window.location.replace(map);
+			//window.location.replace("http://maps.google.com");
 		},
 		onPress: function () {
 				//	this.getOwnerComponent().getRouter().navTo("RouteLogin");
