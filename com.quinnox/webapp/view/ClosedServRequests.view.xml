@@ -13,7 +13,8 @@
 						<attributes>
 							<ObjectAttribute title="Comments by Customer" text="{oClosedServices>Comment}"></ObjectAttribute>
 							<ObjectAttribute text="Device Number :{oClosedServices>PId}"></ObjectAttribute>
-							<ObjectAttribute text="Remarks : Short Circuit"></ObjectAttribute>
+							<ObjectAttribute title="Technician Cause" text="{oClosedServices>TechnicianCause}"></ObjectAttribute>
+							<ObjectAttribute title="Technician Comments" text="{oClosedServices>TechnicianComments}"></ObjectAttribute>
 						</attributes>
 						<firstStatus>
 							<ObjectStatus text="Raised By : {oClosedServices>CustName}"></ObjectStatus>

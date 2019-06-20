@@ -44,7 +44,7 @@ sap.ui.define([
 			var that = this;
 			that.getOwnerComponent().getRouter().navTo("RouteOpenServRequests", {
 				mobileNum: that.mobNum
-			});
+			}, true);
 			// this.odataService.read("TechnicianMasterSet?$filter=TechnicianNo eq '" + sap.ui.getCore().mobNum + "' and ReqType eq 'X'", null,
 			// 	null, false,
 			// 	function (
@@ -58,7 +58,7 @@ sap.ui.define([
 			var that = this;
 			that.getOwnerComponent().getRouter().navTo("RouteClosedServRequests", {
 				mobileNum: that.mobNum
-			});
+			}, true);
 			// this.odataService.read("TechnicianMasterSet?$filter=TechnicianNo eq '" + sap.ui.getCore().mobNum + "' and ReqType eq ''", null,
 			// 	null, false,
 			// 	function (
@@ -74,7 +74,7 @@ sap.ui.define([
 			if (sPreviousHash !== undefined) {
 				window.history.go(-1);
 			} else {
-				this.getOwnerComponent().getRouter().navTo("RouteLogin");
+				this.getOwnerComponent().getRouter().navTo("RouteLogin", null, true);
 			}
 		},
 		onPress: function () {

@@ -160,7 +160,7 @@ sap.ui.define([
 									} else {
 										this.getOwnerComponent().getRouter().navTo("RouteHome", {
 											mobileNum: this.mobNum
-										});
+										}, true);
 									}
 
 									// console.log(this.getView().getModel("oOpenServices").getData());
@@ -211,7 +211,7 @@ sap.ui.define([
 			if (sPreviousHash !== undefined) {
 				history.go(-1);
 			} else {
-				this.getOwnerComponent().getRouter().navTo("RouteLogin");
+				this.getOwnerComponent().getRouter().navTo("RouteLogin", null, true);
 			}
 		},
 		onPress: function () {

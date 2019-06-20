@@ -83,7 +83,7 @@ sap.ui.define([
 				// sap.ui.getCore().listFlag = true;
 				window.history.go(-1);
 			} else {
-				this.getOwnerComponent().getRouter().navTo("RouteLogin");
+				this.getOwnerComponent().getRouter().navTo("RouteLogin", null, true);
 			}
 		},
 		onPress: function () {

@@ -47,7 +47,7 @@ sap.ui.define([
 					// that.getOwnerComponent().getRouter().navTo("RouteHome");
 					that.getOwnerComponent().getRouter().navTo("RouteHome", {
 						mobileNum: mobNum
-					});
+					}, true);
 
 				} else {
 					MessageBox.error("Enter Valid Number");
