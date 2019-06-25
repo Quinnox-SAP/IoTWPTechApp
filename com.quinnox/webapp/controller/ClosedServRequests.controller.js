@@ -1,8 +1,9 @@
 sap.ui.define([
 	"sap/ui/core/mvc/Controller",
 	"sap/ui/model/Filter",
-	"sap/ui/core/routing/History"
-], function (Controller, Filter, History) {
+	"sap/ui/core/routing/History",
+	"sap/ui/core/routing/HashChanger"
+], function (Controller, Filter, History, HashChanger) {
 	"use strict";
 
 	return Controller.extend("com.quinnox.controller.ClosedServRequests", {
@@ -90,6 +91,7 @@ sap.ui.define([
 			//this.getOwnerComponent().getRouter().navTo("RouteLogin");
 			var oRef = this;
 			var sRouter = sap.ui.core.UIComponent.getRouterFor(oRef);
+			HashChanger.getInstance().replaceHash("");
 			sRouter.navTo("RouteLogin", null, true);
 		}
 
