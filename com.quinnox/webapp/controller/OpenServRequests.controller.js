@@ -42,10 +42,25 @@ sap.ui.define([
 			that.getView().byId("searchId").setValue("");
 			var aFilters = [];
 			var sQuery = "";
+
 			if (sQuery && sQuery.length > 0) {
-				var filter = new Filter("NotiNumber", sap.ui.model.FilterOperator.Contains, sQuery);
-				aFilters.push(filter);
+				//			var filter = new Filter("NotiNumber", sap.ui.model.FilterOperator.Contains, sQuery);
+				var filter = [
+					new sap.ui.model.Filter("NotiNumber", sap.ui.model.FilterOperator.Contains, sQuery),
+					new sap.ui.model.Filter("CustName", sap.ui.model.FilterOperator.Contains, sQuery),
+					new sap.ui.model.Filter("Address", sap.ui.model.FilterOperator.Contains, sQuery),
+					new sap.ui.model.Filter("FaultCode", sap.ui.model.FilterOperator.Contains, sQuery),
+					new sap.ui.model.Filter("FaultCodeDesc", sap.ui.model.FilterOperator.Contains, sQuery),
+					new sap.ui.model.Filter("RaisedOn", sap.ui.model.FilterOperator.Contains, sQuery)
+				];
+				aFilters = new sap.ui.model.Filter(filter, false);
+				//	aFilters.push(filter);
 			}
+
+			// if (sQuery && sQuery.length > 0) {
+			// 	var filter = new Filter("NotiNumber", sap.ui.model.FilterOperator.Contains, sQuery);
+			// 	aFilters.push(filter);
+			// }
 
 			// update list binding
 			var list = this.byId("idList");
@@ -70,10 +85,25 @@ sap.ui.define([
 			// add filter for search
 			var aFilters = [];
 			var sQuery = oEvt.getSource().getValue();
+
 			if (sQuery && sQuery.length > 0) {
-				var filter = new Filter("NotiNumber", sap.ui.model.FilterOperator.Contains, sQuery);
-				aFilters.push(filter);
+				//			var filter = new Filter("NotiNumber", sap.ui.model.FilterOperator.Contains, sQuery);
+				var filter = [
+					new sap.ui.model.Filter("NotiNumber", sap.ui.model.FilterOperator.Contains, sQuery),
+					new sap.ui.model.Filter("CustName", sap.ui.model.FilterOperator.Contains, sQuery),
+					new sap.ui.model.Filter("Address", sap.ui.model.FilterOperator.Contains, sQuery),
+					new sap.ui.model.Filter("FaultCode", sap.ui.model.FilterOperator.Contains, sQuery),
+					new sap.ui.model.Filter("FaultCodeDesc", sap.ui.model.FilterOperator.Contains, sQuery),
+					new sap.ui.model.Filter("RaisedOn", sap.ui.model.FilterOperator.Contains, sQuery)
+				];
+				aFilters = new sap.ui.model.Filter(filter, false);
+				//	aFilters.push(filter);
 			}
+
+			// if (sQuery && sQuery.length > 0) {
+			// 	var filter = new Filter("NotiNumber", sap.ui.model.FilterOperator.Contains, sQuery);
+			// 	aFilters.push(filter);
+			// }
 
 			// update list binding
 			var list = this.byId("idList");
@@ -188,10 +218,25 @@ sap.ui.define([
 			that.getView().byId("searchId").setValue("");
 			var aFilters = [];
 			var sQuery = "";
+
 			if (sQuery && sQuery.length > 0) {
-				var filter = new Filter("NotiNumber", sap.ui.model.FilterOperator.Contains, sQuery);
-				aFilters.push(filter);
+				//			var filter = new Filter("NotiNumber", sap.ui.model.FilterOperator.Contains, sQuery);
+				var filter = [
+					new sap.ui.model.Filter("NotiNumber", sap.ui.model.FilterOperator.Contains, sQuery),
+					new sap.ui.model.Filter("CustName", sap.ui.model.FilterOperator.Contains, sQuery),
+					new sap.ui.model.Filter("Address", sap.ui.model.FilterOperator.Contains, sQuery),
+					new sap.ui.model.Filter("FaultCode", sap.ui.model.FilterOperator.Contains, sQuery),
+					new sap.ui.model.Filter("FaultCodeDesc", sap.ui.model.FilterOperator.Contains, sQuery),
+					new sap.ui.model.Filter("RaisedOn", sap.ui.model.FilterOperator.Contains, sQuery)
+				];
+				aFilters = new sap.ui.model.Filter(filter, false);
+				//	aFilters.push(filter);
 			}
+
+			// if (sQuery && sQuery.length > 0) {
+			// 	var filter = new Filter("NotiNumber", sap.ui.model.FilterOperator.Contains, sQuery);
+			// 	aFilters.push(filter);
+			// }
 
 			// update list binding
 			var list = this.byId("idList");

@@ -26,6 +26,37 @@ sap.ui.define([
 		onBeforeShow: function (oEvent) {
 			this.getView().byId("idnum").setValue("");
 		},
+
+		onEnterPress: function () {
+			var that = this;
+			var mobNum = that.getView().byId("idnum").getValue();
+			// this.odataService.read("TechnicianNo?MobileNo='" + mobNum + "'", null, null, false, function (response) {
+			// 	if (response.Message === "Invalid No") {
+			// 		MessageBox.error("Enter Valid Number");
+			// 		that.getView().byId("idnum").setValue("");
+			// 	}
+			// });
+			// that.getOwnerComponent().getRouter().navTo("RouteHome", {
+			// 	mobileNum: mobNum
+			// });
+			// sap.ui.getCore().mobNum = that.getView().byId("idnum").getValue();
+			this.odataService.read("TechnicianNo?MobileNo='" + mobNum + "'", null, null, false, function (response) {
+				// console.log(response);
+				if (response.Message === "Valid No") {
+					// that.getOwnerComponent().getModel("oTechnician").setData(response);
+					// that.getOwnerComponent().getModel("oTechnician").refresh(true);
+					// that.getOwnerComponent().getRouter().navTo("RouteHome");
+					that.getOwnerComponent().getRouter().navTo("RouteHome", {
+						mobileNum: mobNum
+					});
+
+				} else {
+					MessageBox.error("Enter Valid Number");
+					that.getView().byId("idnum").setValue("");
+				}
+			});
+		},
+
 		onLoginPress: function () {
 			var that = this;
 			var mobNum = that.getView().byId("idnum").getValue();
