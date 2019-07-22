@@ -139,26 +139,20 @@
 				"controlId": "idAppControl"
 			},
 			"routes": [{
-				"name": "RouteLogin",
-				"pattern": "",
-				"target": [
-					"Login"
-				]
-			}, {
 				"name": "RouteHome",
-				"pattern": "Home/{mobileNum}",
+				"pattern": "",
 				"target": [
 					"Home"
 				]
 			}, {
 				"name": "RouteOpenServRequests",
-				"pattern": "OpenServRequests/{mobileNum}",
+				"pattern": "OpenServRequests",
 				"target": [
 					"OpenServRequests"
 				]
 			}, {
 				"name": "RouteClosedServRequests",
-				"pattern": "ClosedServRequests/{mobileNum}",
+				"pattern": "ClosedServRequests",
 				"target": [
 					"ClosedServRequests"
 				]

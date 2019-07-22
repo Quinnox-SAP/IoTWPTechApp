@@ -20,15 +20,16 @@ sap.ui.define([
 				json: true
 			});
 
-			this.mobNum = "";
+			//	this.mobNum = "";
 
 			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 			oRouter.getRoute("RouteHome").attachPatternMatched(this._onObjectMatched, this);
 		},
 		_onObjectMatched: function (oEvent) {
 			var that = this;
-			this.mobNum = oEvent.getParameter("arguments").mobileNum;
-			this.odataService.read("TechnicianNo?MobileNo='" + this.mobNum + "'", null, null, false, function (response) {
+			//this.mobNum = oEvent.getParameter("arguments").mobileNum;
+			//this.odataService.read("TechnicianNo?MobileNo='" + this.mobNum + "'", null, null, false, function (response) {
+			this.odataService.read("TechnicianNo?MobileNo='8884072707'", null, null, false, function (response) {
 				if (response.Message === "Valid No") {
 					that.getOwnerComponent().getModel("oTechnician").setData(response);
 					that.getOwnerComponent().getModel("oTechnician").refresh(true);
@@ -41,10 +42,11 @@ sap.ui.define([
 			});
 		},
 		onOpenServReq: function () {
-			var that = this;
-			that.getOwnerComponent().getRouter().navTo("RouteOpenServRequests", {
-				mobileNum: that.mobNum
-			});
+			//	var that = this;
+			this.getOwnerComponent().getRouter().navTo("RouteOpenServRequests");
+			// that.getOwnerComponent().getRouter().navTo("RouteOpenServRequests", {
+			// 	mobileNum: that.mobNum
+			// });
 			// this.odataService.read("TechnicianMasterSet?$filter=TechnicianNo eq '" + sap.ui.getCore().mobNum + "' and ReqType eq 'X'", null,
 			// 	null, false,
 			// 	function (
@@ -55,10 +57,11 @@ sap.ui.define([
 			// 	});
 		},
 		onClosedServReq: function () {
-			var that = this;
-			that.getOwnerComponent().getRouter().navTo("RouteClosedServRequests", {
-				mobileNum: that.mobNum
-			});
+			//var that = this;
+			this.getOwnerComponent().getRouter().navTo("RouteClosedServRequests");
+			// that.getOwnerComponent().getRouter().navTo("RouteClosedServRequests", {
+			// 	mobileNum: that.mobNum
+			// });
 			// this.odataService.read("TechnicianMasterSet?$filter=TechnicianNo eq '" + sap.ui.getCore().mobNum + "' and ReqType eq ''", null,
 			// 	null, false,
 			// 	function (

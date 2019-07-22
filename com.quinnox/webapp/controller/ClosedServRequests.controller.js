@@ -52,8 +52,9 @@ sap.ui.define([
 			var list = this.byId("idList");
 			var binding = list.getBinding("items");
 			binding.filter(aFilters);
-			var mobNum = oEvent.getParameter("arguments").mobileNum;
-			this.odataService.read("TechnicianMasterSet?$filter=TechnicianNo eq '" + mobNum + "' and ReqType eq ''", null,
+			//var mobNum = oEvent.getParameter("arguments").mobileNum;
+			//	this.odataService.read("TechnicianMasterSet?$filter=TechnicianNo eq '" + mobNum + "' and ReqType eq ''", null,
+			this.odataService.read("TechnicianMasterSet?$filter=TechnicianNo eq '8884072707' and ReqType eq ''", null,
 				null, false,
 				function (
 					response) {

@@ -66,9 +66,10 @@ sap.ui.define([
 			var list = this.byId("idList");
 			var binding = list.getBinding("items");
 			binding.filter(aFilters);
-			var mobNum = oEvent.getParameter("arguments").mobileNum;
-			that.mobNum = mobNum;
-			this.odataService.read("TechnicianMasterSet?$filter=TechnicianNo eq '" + mobNum + "' and ReqType eq 'X'", null,
+			//var mobNum = oEvent.getParameter("arguments").mobileNum;
+			//that.mobNum = mobNum;
+			//this.odataService.read("TechnicianMasterSet?$filter=TechnicianNo eq '" + mobNum + "' and ReqType eq 'X'", null,
+			this.odataService.read("TechnicianMasterSet?$filter=TechnicianNo eq '8884072707' and ReqType eq 'X'", null,
 				null, false,
 				function (
 					response) {
@@ -188,9 +189,10 @@ sap.ui.define([
 									if (sPreviousHash !== undefined) {
 										window.history.go(-1);
 									} else {
-										this.getOwnerComponent().getRouter().navTo("RouteHome", {
-											mobileNum: this.mobNum
-										});
+											this.getOwnerComponent().getRouter().navTo("RouteHome");
+										// this.getOwnerComponent().getRouter().navTo("RouteHome", {
+										// 	mobileNum: this.mobNum
+										// });
 									}
 
 									// console.log(this.getView().getModel("oOpenServices").getData());
