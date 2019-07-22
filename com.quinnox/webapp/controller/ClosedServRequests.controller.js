@@ -142,10 +142,11 @@ sap.ui.define([
 		},
 		onPress: function () {
 			//this.getOwnerComponent().getRouter().navTo("RouteLogin");
-			var oRef = this;
-			var sRouter = sap.ui.core.UIComponent.getRouterFor(oRef);
-			HashChanger.getInstance().replaceHash("");
-			sRouter.navTo("RouteLogin", null, true);
+			window.location.replace("https://quinnoxiotcf.authentication.eu10.hana.ondemand.com/login");
+			// var oRef = this;
+			// var sRouter = sap.ui.core.UIComponent.getRouterFor(oRef);
+			// HashChanger.getInstance().replaceHash("");
+			// sRouter.navTo("RouteLogin", null, true);
 		}
 
 		/**
